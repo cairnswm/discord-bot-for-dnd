@@ -19,6 +19,10 @@ app.get('/get', function (req, res) {
   res.send("Cache is "+cache.data);
 })
 
+app.get("/api/campaign", function (req, res) {
+  res.send({ campaigns: []});
+})
+
 // add middlewares
 app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
